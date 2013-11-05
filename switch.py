@@ -17,6 +17,13 @@ def low():
     GPIO.output(PORT, GPIO.LOW)
 
 
+def open():
+    low()
+    time.sleep(2)
+    high()
+    GPIO.cleanup()
+
+
 if sys.argv[1] == "open":
     low()
     time.sleep(2)
